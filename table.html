@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table {
+
+            border-collapse: collapse;
+            border-top: 20px;
+            background-color: rgb(108, 201, 108);
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+
+        }
+
+        thead {
+            background-color: rgb(108, 201, 108);
+            color: white;
+            overflow: hidden;
+
+        } 
+
+        tbody {
+            background-color: beige;
+        }
+
+        td {
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        tr.p{
+            border: 5px solid rgb(108, 201, 108);
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+        }
+        td.t {
+            background-color: rgb(224, 219, 219);
+            color: rgb(108, 201, 108);
+        }
+        /* tr:hover {
+            background-color: rgb(224, 219, 219);
+            color: rgb(108, 201, 108);
+        } */
+    </style>
+</head>
+<body>
+        <table>
+            <thead>
+                <tr>
+                    <td>Rank</td>
+                    <td>Name</td>
+                    <td>Points</td>
+                    <td>Team</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Domestic</td>
+                    <td>88,110</td>
+                    <td>dcode</td>
+                </tr>
+                <tr>
+                    <td class="t">2</td>
+                    <td class="t">Sally</td>
+                    <td class="t">72400</td>
+                    <td class="t">Students</td>
+                </tr>
+                <tr  class="p">
+                    <td>3</td>
+                    <td>Nick</td>
+                    <td>52300</td>
+                    <td>dcode</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+
+</html>
