@@ -4,46 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table</title>
+    <title>sign-in</title>
     <style>
-        table {
-
-            border-collapse: collapse;
-            border-top: 20px;
-            background-color: rgb(108, 201, 108);
-            overflow: hidden;
-            border-radius: 8px 8px 0 0;
-
-        }
-
-        thead {
-            background-color: rgb(108, 201, 108);
-            color: white;
-            
-
-        } 
-
-        tbody {
-            background-color: beige;
-        }
-
-        td {
-            padding: 15px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-        }
-        tr.p{
-            border: 5px solid rgb(108, 201, 108);
-            border-top: 0;
-            border-right: 0;
-            border-left: 0;
-        }
-        td.t {
-            background-color: rgb(224, 219, 219);
-            color: rgb(108, 201, 108);
+        body {
+            background-color: plum;
         }
         nav {
-            background-color: rgb(34, 10, 51);
+            background-color: gold;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -66,7 +33,7 @@
         .nav_list_parent {
             display: flex;
             justify-content: space-between;
-            gap: 10px;
+            gap: 5px;
         }
 
         nav .nav_list {
@@ -89,7 +56,7 @@
         }
 
         .nav_list .nav_inline .inline_list li:hover {
-            background-color: blue;
+            background-color: rgb(143, 99, 99);
         }
 
         a {
@@ -106,12 +73,59 @@
             padding: 10px 20px;
             margin-right: 40px;
         }
-        /* tr:hover {
-            background-color: rgb(224, 219, 219);
-            color: rgb(108, 201, 108);
-        } */
+
+        input {
+            width: 100%;
+            height: 40px;
+            border: 1px solid rgb(231, 219, 219);
+            border-radius: 3px;
+            outline: none;
+        }
+
+        form {
+            background-color: white;
+            width: 250px;
+            height: 450px;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 475px;
+
+        }
+
+        input[type='checkbox'] {
+            width: 15px;
+        }
+
+        input::placeholder {
+            padding-left: 5px;
+            color: rgb(189, 183, 183);
+        }
+
+
+        .btn_signup {
+            width: 100%;
+            height: 65px;
+            background-color: rgb(112, 219, 219);
+            color: white;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        input:focus {
+            border: 1px solid plum;
+            color: plum;
+
+        }
+        .checkbox-section{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
     </style>
 </head>
+
 <body>
     <nav>
         <div class="logo_sec">
@@ -142,36 +156,23 @@
             <button class="btn_nav">LOGIN</button>
         </div>
     </nav>
-        <table>
-            <thead>
-                <tr>
-                    <td>Rank</td>
-                    <td>Name</td>
-                    <td>Points</td>
-                    <td>Team</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Domestic</td>
-                    <td>88,110</td>
-                    <td>dcode</td>
-                </tr>
-                <tr>
-                    <td class="t">2</td>
-                    <td class="t">Sally</td>
-                    <td class="t">72400</td>
-                    <td class="t">Students</td>
-                </tr>
-                <tr  class="p">
-                    <td>3</td>
-                    <td>Nick</td>
-                    <td>52300</td>
-                    <td>dcode</td>
-                </tr>
-            </tbody>
-        </table>
+    <form>
+        <h1
+            style="color:plum; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            Sign in
+        </h1>
+        <p>
+            You know how much a squirrel misses his <br> nuts? Yep that is how much we missed you. <br>
+            <b>Welcome back.</b>
+        </p>
+        <input type="text" placeholder="Username or Email Address"> <br> <br>
+        <input type="password" placeholder="Password"> <br> <br>
+        <div  class="checkbox-section">
+            <input type="checkbox"> <label>Stay signed in for longer</label>
+        </div> <br><br>
+        <button class="btn_signup">Sign into your account &#8594; </button>
+
+    </form>
 </body>
 
 </html>

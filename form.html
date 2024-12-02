@@ -4,45 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table</title>
+    <title>form</title>
     <style>
-        table {
-
-            border-collapse: collapse;
-            border-top: 20px;
-            background-color: rgb(108, 201, 108);
-            overflow: hidden;
-            border-radius: 8px 8px 0 0;
-
-        }
-
-        thead {
-            background-color: rgb(108, 201, 108);
-            color: white;
-            
-
-        } 
-
-        tbody {
-            background-color: beige;
-        }
-
-        td {
-            padding: 15px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-        }
-        tr.p{
-            border: 5px solid rgb(108, 201, 108);
-            border-top: 0;
-            border-right: 0;
-            border-left: 0;
-        }
-        td.t {
-            background-color: rgb(224, 219, 219);
-            color: rgb(108, 201, 108);
-        }
-        nav {
+         nav {
             background-color: rgb(34, 10, 51);
             display: flex;
             justify-content: space-between;
@@ -106,10 +70,44 @@
             padding: 10px 20px;
             margin-right: 40px;
         }
-        /* tr:hover {
-            background-color: rgb(224, 219, 219);
-            color: rgb(108, 201, 108);
-        } */
+
+        body {
+            background-color: rgb(34, 13, 53);
+        }
+
+        .parent {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+        }
+        .content {
+            background-color: white;
+            width: 350px;
+            height: 250px;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 475px;
+            
+        }
+        input{
+            width: 270px;
+            height: 20px;
+            border: 1px solid rgb(231, 219, 219);
+            border-radius: 3px;
+        }
+        .btn_form{
+            width: 270px;
+            height:35px ;
+            background-color: rgb(112, 219, 219);
+            color: white;
+            border-radius: 5px;
+            border: 0;
+        }
+        ::placeholder{
+            padding-left: 5px;
+            color:rgb(189, 183, 183) ;
+        }
     </style>
 </head>
 <body>
@@ -142,36 +140,28 @@
             <button class="btn_nav">LOGIN</button>
         </div>
     </nav>
-        <table>
-            <thead>
-                <tr>
-                    <td>Rank</td>
-                    <td>Name</td>
-                    <td>Points</td>
-                    <td>Team</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Domestic</td>
-                    <td>88,110</td>
-                    <td>dcode</td>
-                </tr>
-                <tr>
-                    <td class="t">2</td>
-                    <td class="t">Sally</td>
-                    <td class="t">72400</td>
-                    <td class="t">Students</td>
-                </tr>
-                <tr  class="p">
-                    <td>3</td>
-                    <td>Nick</td>
-                    <td>52300</td>
-                    <td>dcode</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="parent">
+        <h1> with Bridge</h1> 
+        <p>
+            Bridge provides cutting-edge ecommerce, <br> business intelligence, and conent solutions for 
+            <br>the beverage alcohol
+            industry
+        </p>
+        <div class="content">
+            <h3>
+                Getting started is easy
+            </h3>
+            <p style="color:rgb(105, 105, 105)">
+                Enter your informmation below to request a demo
+            </p>
+            <form>
+                <input type="text" placeholder="Full Name*"> <br> <br>
+                <input type="email" placeholder="Email*"> <br> <br>
+                <input type="text" placeholder="Company*"> <br> <br>
+                <button class="btn_form">Request Demo</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
