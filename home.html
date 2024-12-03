@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             background: linear-gradient(50deg, #A7969C, #978BAD, #319BAA);
             background-repeat: no-repeat;
             height: 100vh;
-            padding-left: 20px;
+            /* padding-left: 20px; */
         }
 
         nav {
@@ -47,12 +50,19 @@
         }
 
         .btn_nav {
-            background-color: #978BAD;
-            border: none;
+            background-color: transparent;
+            border: 1px solid white;
             color: white;
             border-radius: 2px;
-            padding: 10px 20px;
+            padding: 8px 15px;
             margin-right: 40px;
+        }
+
+        .btn_main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
         }
 
         .section_1 {
@@ -70,8 +80,13 @@
             margin-right: 20px;
         }
 
+        img {
+            width: 400px;
+            height: 400px;
+        }
+
         .btn_sect_2 {
-            background-color: #978BAD;
+            background-color: transparent;
             border: 1px solid white;
             border-radius: 3px;
             color: white;
@@ -84,27 +99,68 @@
 
         .main_sect {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             gap: 200px;
             margin-top: 100px;
         }
 
+        .mobile_sec {
+            font-size: 35px;
+        }
+
+        .mobile_sec2 {
+            font-size: 23px;
+        }
+
         .inline_list {
-            background-color: black;
+            background-color: gray;
             padding: 5px;
             list-style-type: none;
             display: none;
             position: absolute;
         }
 
-        .parent_list .nav_inline :hover .inline_list {
+        .parent_list .nav_inline:hover .inline_list {
             display: block;
         }
 
-        /* .parent_list .nav_inline .inline_list li:hover {
+        .parent_list .nav_inline .inline_list li:hover {
             background-color: blue;
-        } */
+        }
+
+        .icon_bar {
+            display: none;
+            color: white;
+            font-size: 50px;
+        }
+
+        @media (max-width:992px) {
+            .main_sect {
+                flex-direction: column;
+            }
+
+            .parent_list,
+            .btn_main {
+                display: none;
+            }
+
+            .icon_bar {
+                display: block;
+            }
+
+            .mobile_sec {
+                font-size: 28px;
+            }
+
+            .mobile_sec2 {
+                font-size: 15px;
+            }
+            nav {
+            display: flex;
+            justify-content: space-evenly;
+            }
+        }
     </style>
 </head>
 
@@ -115,32 +171,37 @@
         </div>
 
         <ol class="parent_list">
-            <li class="nav_inline"><a href="">Home</a></li>
-            <ol class="inline_list">
-                <li><a href="home.html">Home Page</a></li>
-                <li><a href="sign-in.html">Sign-In</a></li>
-                <li><a href="">Animation</a></li>
-                <li><a href="form.html">Form</a></li>
-                <li><a href="nav1.html">Nav</a></li>
-                <li><a href="table.html">Table</a></li>
-            </ol>
+            <li class="nav_inline">
+                <a href="">Home</a>
+                <ol class="inline_list">
+                    <li><a href="home.html">Home Page</a></li>
+                    <li><a href="sign-in.html">Sign-In</a></li>
+                    <li><a href="">Animation</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="nav1.html">Nav</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="icon.html">Icon</a></li>
+                </ol>
+            </li>
+
             <li><a href="">About Us</a></li>
             <li><a href="">Services</a></li>
             <li><a href="">Portfolio</a></li>
             <li><a href="">Contact Us</a></li>
         </ol>
 
-        <div>
+        <div class="btn_main">
             <a href="">Sign In</a>
-            <button class="btn_nav">Sign Up</button>
+            <a class="btn_nav" href="">Sign Up</a>
         </div>
+        <i class="fa-solid fa-bars icon icon_bar"></i>
     </nav>
     <div class="main_sect">
         <div class="section_1">
-            <p style="font-size: 30px;">
+            <p class="mobile_sec">
                 Mobile App Development.
             </p>
-            <p style="font-size: 18px;">
+            <p class="mobile_sec2">
                 Join us in the exciting world of programming and turn your ideas <br>
                 into reality. Unlock the world of endless possibilities - learn to <br>
                 code and shape the digital future with us. <br>
